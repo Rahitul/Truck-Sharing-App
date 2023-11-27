@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SeeProfileOfDrivers">
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/heading_background"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/backSeeDriverProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="প্রোফাইল"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageSeeDriverProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="115dp"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/usernameSeeDriverProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="115dp"
+        android:fontFamily="@font/liadornoirritbold"
+        android:gravity="center"
+        android:text="Rahitul"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/seeProfilesVerifyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="115dp"
+        android:fontFamily="@font/liadornoirritregular"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/low_gray_color_button"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_rating_see_driver_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="2.5"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <RatingBar
+            android:id="@+id/rating_bar_see_driver_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RatingBar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="মন্তব্য সমূহ"
+                android:fontFamily="@font/liadornoirritbold"
+                android:layout_marginBottom="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAboutDrivers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

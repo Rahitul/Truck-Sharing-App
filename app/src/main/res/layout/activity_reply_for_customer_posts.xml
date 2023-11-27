@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReplyActivityForCustomerPosts">
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/backReplyForCustomersPosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="রিপ্লাই করুন"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/containerReplyForCustomersPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/DavatarReplyForCustomersPostsIV"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/avatar">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/DnameReplyForCustomersPostsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/DavatarReplyForCustomersPostsIV"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="Rahitul"
+            android:textColor="@color/primary"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/DcommentReplyForCustomersPostsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DnameReplyForCustomersPostsTV"
+            android:layout_toEndOf="@id/DavatarReplyForCustomersPostsIV"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="This is the comment"
+            android:textColor="#000">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/DVehicleModelReplyForCustomersPostsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DcommentReplyForCustomersPostsTV"
+            android:layout_toEndOf="@id/DavatarReplyForCustomersPostsIV"
+            android:fontFamily="@font/liadornoirritbold"
+            android:textColor="@color/primary">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/DtimeReplyForCustomersPostsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DVehicleModelReplyForCustomersPostsTV"
+            android:layout_toEndOf="@id/DavatarReplyForCustomersPostsIV"
+            android:fontFamily="@font/liadornoirritregular">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/DReplyCountReplyForCustomersPostsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DtimeReplyForCustomersPostsTV"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/DavatarReplyForCustomersPostsIV"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="২ রিপ্লাই">
+
+        </TextView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/containerReplyForCustomersPosts"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background">
+
+    </View>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsReplyForCustomersPostsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/commentsLayout"
+        android:layout_below="@id/line">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/commentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cAvatarIV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/avatar"
+            android:visibility="gone">
+
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/commentReplyForCustomersPostsET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toStartOf="@id/sendBtn"
+            android:layout_toEndOf="@id/cAvatarIV"
+            android:background="@drawable/rounded_border"
+            android:fontFamily="@font/liadornoirritbold"
+            android:gravity="center"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="10dp"
+            android:text="রিপ্লাই করুন"
+            android:textSize="15dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_send_24"
+            android:visibility="gone">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

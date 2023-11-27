@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Activity.PostAmbulanceActivity"
+android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            android:padding="20dp"
+            android:layout_weight="8">
+
+            <ImageView
+                android:id="@+id/backAmbulancePost"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_chevron_left">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/liadornoirritregular"
+                android:text="পোস্ট করুন"
+                android:textColor="@color/white"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ambulanceAddPostBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/gradient"
+            android:gravity="center">
+
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_check_square">
+
+            </ImageView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_user"
+            app:helperText="ড্রাইভারের নাম দিন*"
+            app:helperTextTextColor="@color/primary"
+            android:layout_marginBottom="5dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cNameETAmbulancePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ড্রাইভারের নাম"
+                android:fontFamily="@font/liadornoirritbold"
+                android:maxLength="20">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_corner_left_up"
+            app:helperText="উদা: আপনার গ্রাম, আপনার থানা, আপনার জেলা*"
+            app:helperTextTextColor="@color/primary"
+            android:layout_marginBottom="5dp"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_sourceAmbulancePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="লোকেশন"
+                android:fontFamily="@font/liadornoirritbold">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_map_pin"
+            app:helperText="উদা: হাসপাতালের নাম*"
+            app:helperTextTextColor="@color/primary"
+            android:layout_marginBottom="5dp"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/et_destinationAmbulancePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="গন্তব্য"
+                android:fontFamily="@font/liadornoirritbold">
+
+            </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_baseline_123_24"
+            app:helperText="উদা: Dhaka Metro 321234*"
+            app:helperTextTextColor="@color/primary"
+            android:layout_marginBottom="5dp"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/NumberPlateAmbulancePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="গাড়ির নাম্বার"
+                android:fontFamily="@font/liadornoirritbold">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_taka"
+            app:helperText="চাহিদা অনুযায়ী খরচ দিন (উদা: 20000)*"
+            app:helperTextTextColor="@color/primary"
+            android:layout_marginBottom="5dp"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cExpectedPriceETAmbulancePost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="খরচ"
+                android:fontFamily="@font/liadornoirritbold">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+        <Spinner
+            android:id="@+id/AmbulancePost_spinner_Vehicle_Model"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.498"
+            android:entries="@array/spinner_items" />
+
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+</LinearLayout>

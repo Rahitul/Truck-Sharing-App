@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/lists"
+        android:title="হোম"
+        android:icon="@drawable/ic_home"
+        android:iconTintMode="screen"/>
+    <item android:id="@+id/history"
+        android:title="ট্রিপ"
+        android:icon="@drawable/ic_truck"/>
+    <item android:id="@+id/posts"
+        android:title="পোস্টসমূহ"
+        android:icon="@drawable/ic_align_center"/>
+    <item android:id="@+id/notifications"
+        android:title="নোটিফিকেশন"
+        android:icon="@drawable/ic_bell"/>
+    <item android:id="@+id/profile"
+        android:title="প্রোফাইল"
+        android:icon="@drawable/ic_user"/>
+</menu>

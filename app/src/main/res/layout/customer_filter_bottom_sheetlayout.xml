@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="8"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_clear_primary_24"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/choosetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="খুজুন"
+            android:textColor="@color/primary"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/liadornoirritregular"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <AutoCompleteTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/liadornoirritregular"
+        android:hint="যাত্রার লোকেশন দিন"
+        android:importantForAutofill="no"
+        android:padding="8dp"
+        android:textColorHint="#A8A8A8"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_border"
+        android:visibility="gone"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:visibility="gone">
+
+
+
+        <ImageView
+            android:id="@+id/locationDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:visibility="gone">
+
+        </ImageView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="9"
+            android:fontFamily="@font/liadornoirritregular"
+            android:hint="গন্তব্য দিন"
+            android:importantForAutofill="no"
+            android:textColorHint="#A8A8A8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/rounded_border"/>
+
+
+
+        <ImageView
+            android:id="@+id/destinationDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:visibility="gone">
+
+        </ImageView>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/vehicleTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="9"
+            android:fontFamily="@font/liadornoirritregular"
+            android:hint="গাড়ির ধরন দিন, উদাঃ Truck,Covered Van....."
+            android:importantForAutofill="no"
+            android:textColorHint="#A8A8A8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/rounded_border"/>
+
+
+
+        <ImageView
+            android:id="@+id/vehicleTypeDropDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:visibility="gone">
+
+        </ImageView>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_corner_left_up"
+        app:helperTextTextColor="@color/primary"
+        android:layout_marginBottom="5dp"
+        app:endIconMode="clear_text"
+        app:helperText="আপনার উপজেলা/থানা এর নাম "
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/searchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="লোকেশন"
+            android:fontFamily="@font/liadornoirritbold">
+
+        </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_map_pin"
+        app:helperTextTextColor="@color/primary"
+        android:layout_marginBottom="5dp"
+        app:endIconMode="clear_text"
+        app:helperText="আপনার উপজেলা/থানা এর নাম "
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/searchDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="গন্তব্য"
+            android:fontFamily="@font/liadornoirritbold">
+
+        </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_truck"
+        app:helperTextTextColor="@color/primary"
+        android:layout_marginBottom="5dp"
+        app:endIconMode="clear_text"
+        app:helperText="উদাঃ Truck, Covered Van, Mini Truck, MicroBus, CNG,Car"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/searchVehicleType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="গাড়ির ধরন"
+            android:fontFamily="@font/liadornoirritbold">
+
+        </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="খুজুন"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:layout_margin="20dp">
+
+    </TextView>
+
+
+
+
+
+
+</LinearLayout>

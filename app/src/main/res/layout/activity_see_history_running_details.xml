@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SeeHistoryRunningDetailsActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/backHRD"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_left">
+
+        </ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="রানিং ট্রিপ"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/location_finding" />
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/statusDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statusDetailsIcons"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/liadornoirritregular"
+                    android:text="বুক হয়েছে">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="ট্রিপ চলছে"
+                    android:textColor="@color/primary">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:fontFamily="@font/liadornoirritregular"
+                    android:text="ট্রিপ শেষ">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/statusDetailsPointer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statusDetails"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_drop_up_pointer_24">
+
+                </ImageView>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divideTheStatusSection"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/statusDetailsPointer"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/background"
+                android:layout_marginTop="10dp">
+
+            </View>
+
+            <TextView
+                android:id="@+id/customerInformationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divideTheStatusSection"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="কাস্টমারের তথ্য"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/customerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_below="@id/customerInformationLabel"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/rHCustomerDp"
+                    android:layout_width="40dp"
+                    android:layout_height="41dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/rHCustomerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/liadornoirritbold"
+                            android:text="Rahitul Islam"
+                            android:textColor="#000"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/rHCustomerPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/liadornoirritregular"
+                            android:text="+8801521320568">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/callCustomer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_phone">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divideTheCustomerInfoSection"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/customerInfo"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/background">
+
+            </View>
+
+            <TextView
+                android:id="@+id/driverInformationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divideTheCustomerInfoSection"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="ড্রাইভারের তথ্য"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/driverInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_below="@id/driverInformationLabel"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/rHDriverDp"
+                    android:layout_width="40dp"
+                    android:layout_height="41dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rHDriverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:text="Rahitul Islam"
+                        android:textColor="#000"
+                        android:textSize="18sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/rHDriverPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:text="+8801521320568">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/callDriver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_phone">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divideTheDriverInfoSection"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/driverInfo"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/background">
+
+            </View>
+
+            <TextView
+                android:id="@+id/tripInformationLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divideTheDriverInfoSection"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="ট্রিপের তথ্য"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tripInformationLabel"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/rHPostPerssonName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:text="Rayhan Mahmud"
+                        android:textColor="#000"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/ic_corner_left_up">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:id="@+id/rHPostLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:text="Dhanmondi">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/ic_map_pin">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:id="@+id/rHPostDestination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular"
+
+                        android:text="Mirpur">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewTime"
+                        android:layout_width="17dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_access_time_24">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:id="@+id/rHPostStartingTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:text="10:30 PM">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/rHPostStartingDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:text="21 october 2022">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_truck">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/pDriverVehicleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="ট্রাক"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/pDriverNumberPlate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritregular"
+                    android:text="Dhaka Metro 3312"
+                    android:textSize="11sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/driverInfo"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/background">
+
+            </View>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divideTheDriverInfoSection"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="পেমেন্টের তথ্য"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/rHExpectedPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="12000"
+                    android:textColor="#000"
+                    android:textSize="30sp">
+
+                </TextView>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="টাকা"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#000"
+                    android:textSize="30sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/driverInfo"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/background">
+
+            </View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/rHFinishJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="শেষ করুন"
+                    android:textColor="#000"
+                    android:background="@drawable/gray_color_button"
+                    android:padding="10dp"
+                    android:gravity="center">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/cancelTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ট্রিপ বাদ দিন"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/quantum_googred"
+                    android:gravity="center">
+
+                </TextView>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp">
+
+                </View>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

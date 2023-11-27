@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AmbulanceActivity">
+
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/backAmbulance"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_chevron_left">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="এম্বুলেন্স খুজুন"
+            android:textColor="@color/white"
+            android:textSize="20sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ambulancePostsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/heading">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAmbulance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/liadornoirritbold"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:text="রোগী পেতে পোস্ট দিন"
+        android:textAlignment="center"
+        app:icon="@drawable/ic_baseline_edit_24" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBarAmbulance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="363dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="344dp"
+        android:fontFamily="@font/liadornoirritbold"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:text="পছন্দমত কাস্টোমার পেতে পোস্ট দিন"
+        app:icon="@drawable/ic_baseline_edit_24"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/please_wait"/>
+
+    <ImageView
+        android:id="@+id/searchAmbulance"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_search">
+
+    </ImageView>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewReply_for_customer_posts"
+    app:contentPadding="10dp"
+    android:background="@color/white"
+    android:layout_marginBottom="5dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarReply_for_driver_postsIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/avatar">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/nameReply_for_driver_postsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/avatarReply_for_driver_postsIV"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="Rahitul"
+            android:textColor="@color/primary"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/commentReply_for_driver_postsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameReply_for_driver_postsTV"
+            android:layout_toEndOf="@id/avatarReply_for_driver_postsIV"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="This is the comment"
+            android:textColor="#000">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/timeReply_for_driver_postsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/commentReply_for_driver_postsTV"
+            android:layout_toEndOf="@id/avatarReply_for_driver_postsIV">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/acceptBtn_driver_posts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeReply_for_driver_postsTV"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gray_color_button"
+            android:fontFamily="@font/liadornoirritbold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="গ্রহন করুন"
+            android:textColor="@color/primary">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

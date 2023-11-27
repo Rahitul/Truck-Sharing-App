@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:padding="5dp"
+    app:contentPadding="10dp"
+    android:id="@+id/cardViewNotifications">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarIVNotifications"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/avatar">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:id="@+id/acceptLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/avatarIVNotifications"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/nameTVNotifications"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="Rahitul"
+                android:textColor="@color/primary"
+                android:textSize="16dp"
+                android:layout_weight="5"
+                android:gravity="start">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="right">
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/commentTVNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acceptLinear"
+            android:layout_toEndOf="@id/avatarIVNotifications"
+            android:fontFamily="@font/liadornoirritregular"
+            android:text="This is the comment"
+            android:textColor="#000">
+
+        </TextView>
+
+
+
+        <LinearLayout
+            android:id="@+id/linearNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/commentTVNotifications"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/avatarIVNotifications"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/DVehicleModelTV"
+                android:layout_toEndOf="@id/DavatarIV"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/timeTVNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritregular"
+                    android:text="08/04/2023 12:36:am">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/DVehicleModelTV"
+                android:layout_toEndOf="@id/DavatarIV"
+                android:layout_weight="1">
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/DVehicleModelTV"
+                android:layout_toEndOf="@id/DavatarIV"
+                android:layout_weight="1">
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

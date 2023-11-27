@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    tools:ignore="Overdraw"
+    android:orientation="vertical"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="201dp"
+                android:layout_height="39dp"
+                android:src="@drawable/logo">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/liadornoirritregular"
+                android:text="আপনার মোবাইল নাম্বার দিন,
+একটি ওটিপি আপনার মোবাইল নাম্বার এ পাঠানো হবে"
+                android:textColor="@color/primary"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edittext"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/img_username"
+                android:background="#0000"
+                android:digits="+0123456789"
+                android:fontFamily="@font/liadornoirritregular"
+                android:hint="উদা: +880XXXXXXXXXX"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="15"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#A8A8A8"
+                android:textSize="18dp"
+                tools:ignore="HardcodedText,SpUsage,TextFields" />
+
+
+            <ImageView
+                android:id="@+id/img_username"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/contentdescription"
+                android:padding="10dp"
+                android:src="@drawable/ic_phone"
+                app:tint="#fff" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ProgressBar
+            android:id="@+id/progressBar6"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:indeterminateOnly="true"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="এগিয়ে যান >"
+            android:layout_gravity="right"
+            android:textColor="@color/primary"
+            android:textSize="22dp"
+            android:fontFamily="@font/liadornoirritbold">
+
+        </TextView>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

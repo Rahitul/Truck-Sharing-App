@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EditProfileActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/liadornoirritregular"
+                    android:text="আপডেট প্রোফাইল"
+                    android:textColor="@color/primary"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/EPImageViewId"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/avatar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_user"
+                    app:helperText="আপনার নাম দিন*"
+                    app:helperTextTextColor="@color/primary"
+                    android:layout_marginBottom="5dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EPenterUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="নাম"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:maxLength="10">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_home"
+                    android:layout_marginBottom="5dp"
+                    app:helperText="এম আই ডি অনুযায়ী আপনার ঠিকানা দিন*"
+                    app:helperTextTextColor="@color/primary"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EPenterAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:hint="ঠিকানা (এন আই ডি অনুযায়ী)">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_baseline_credit_card_24"
+                    android:layout_marginBottom="5dp"
+                    app:helperText="আপনার এন আই ডি নাম্বার দিন*"
+                    app:helperTextTextColor="@color/primary"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="16"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/EPenterNationalIdCardNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="এন আই ডি নাম্বার"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:maxLength="16">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/background"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp">
+
+                </View>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="ড্রাইভার সেকশান"
+                    android:textColor="@color/primary"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp">
+
+                </TextView>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_weight="2"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/ic_truck"
+                        android:layout_marginBottom="5dp"
+                        app:helperText="আপনার যতগুলো গাড়ি রয়েছে, সবগুলো গাড়ির মডেল নাম্বার একটি একটি করে দিন"
+                        app:helperTextTextColor="@color/primary"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/EPenterVehiclesModel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="গাড়ির মডেল"
+                            android:fontFamily="@font/liadornoirritbold">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/EPAddVehiclesModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:text="সাবমিট"
+                        android:textColor="@color/white"
+                        android:background="@drawable/button_background"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_marginStart="10dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_marginTop="50dp"
+                    android:id="@+id/EPcontinue_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="শেষ করুন >"
+                    android:layout_gravity="right"
+                    android:textColor="@color/primary"
+                    android:textSize="22dp"
+                    android:fontFamily="@font/liadornoirritbold">
+
+                </TextView>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DriverPostDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/heading_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/uCDetailsPictureIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/uCDetailsNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="Rahitul Islam"
+                android:textColor="@color/white"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pCDetailsTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/liadornoirritregular"
+                android:text="33 Min"
+                android:textColor="#C6C6C6">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="টাকা"
+            android:textColor="@color/white"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/pDetailsCustomerCost"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="10000"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/acceptTheJob"
+        android:layout_below="@+id/profileLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/seeTimer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/liadornoirritbold"
+                            android:text="34 মিনিট বাকি"
+                            android:textColor="@color/quantum_googred">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/pDetailsCustomerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/liadornoirritbold"
+                                android:text="Rayhan Mahmud"
+                                android:textColor="#000"
+                                android:textSize="25dp">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="17dp"
+                                android:layout_height="17dp"
+                                android:src="@drawable/ic_corner_left_up">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:id="@+id/pDetailsCustomerLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/liadornoirritregular"
+                                android:text="Dhanmondi">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="17dp"
+                                android:layout_height="17dp"
+                                android:src="@drawable/ic_map_pin">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:id="@+id/pDetailsCustomerDestination"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/liadornoirritregular"
+                                android:text="Mirpur">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="17dp"
+                                android:layout_height="17dp"
+                                android:src="@drawable/ic_baseline_access_time_24">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:id="@+id/pDetailsCustomerStartingTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/liadornoirritregular"
+                                android:text="10:30 PM">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/pDetailsCustomerStartingDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:fontFamily="@font/liadornoirritregular"
+                                android:text="21 october 2022">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_baseline_drive_eta_24">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/pDetailsCustomerVehicleType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/liadornoirritbold"
+                            android:text="Truck"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/background">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/pDetailsCustomerCommentsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:text="12 Comments">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/isAccepted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:gravity="end"
+                        android:text="Not Accepted"
+                        android:textColor="@color/primary"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:drawableLeft="@drawable/ic_message_circle"
+                android:fontFamily="@font/liadornoirritregular"
+                android:text="বিড সমূহ"
+                android:textColor="#000"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleviewCustomerPostDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/acceptTheJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/commentsLayout">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/commentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cAvatarIVDriverPost"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar">
+
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/detailsCommentET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toStartOf="@id/sendBtn"
+            android:layout_toEndOf="@id/cAvatarIVDriverPost"
+            android:background="@drawable/gray_color_button"
+            android:fontFamily="@font/liadornoirritregular"
+            android:gravity="left"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="10dp"
+            android:text="দরদাম করার জন্য কমেন্ট করুন....."
+            android:textColor="@color/primary"
+            android:textSize="13dp">
+
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_send_24"
+            android:visibility="gone">
+
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/acceptAs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/liadornoirritbold"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:text="গ্রহন করুন"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+</RelativeLayout>

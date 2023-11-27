@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/cardViewSeeHistoryDetails"
+    app:cardUseCompatPadding="true"
+    android:padding="5dp"
+    app:contentPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:text="ট্রিপ শেষ হয়েছে"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/liadornoirritregular"
+            android:textColor="@color/primary"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="3dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_corner_left_up">
+
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/HDriverLocation"
+                android:text="Dhanmondi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/liadornoirritregular"
+                android:layout_marginStart="5dp">
+
+            </TextView>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_map_pin">
+
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/HDriverDestination"
+                android:text="Mirpur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/liadornoirritregular">
+
+            </TextView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

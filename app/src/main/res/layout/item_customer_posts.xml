@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customerCardView"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:padding="5dp"
+    app:contentPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/customerProfileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/uCPictureIV"
+                android:layout_width="40dp"
+                android:scaleType="centerCrop"
+                android:layout_height="40dp"
+                android:src="@drawable/avatar">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:id="@+id/uCNameTV"
+                    android:text="Rahitul Islam"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/pCTimeTV"
+                    android:text="33 Min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritregular">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="টাকা"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/liadornoirritbold"
+                android:textSize="25sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/pCustomerCost"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/liadornoirritbold"
+                android:text="10000"
+                android:textColor="@color/primary"
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+
+            <ImageButton
+                android:id="@+id/moreCustomerButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                android:src="@drawable/ic_x">
+
+            </ImageButton>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/background"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp">
+
+
+                    <TextView
+                        android:id="@+id/pCustomerName"
+                        android:text="Rayhan Mahmud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritbold"
+                        android:textColor="#000"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/ic_corner_left_up">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:id="@+id/pCustomerLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular"
+                        android:text="Dhanmondi">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/ic_map_pin">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:id="@+id/pCustomerDestination"
+                        android:text="Mirpur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_access_time_24">
+
+                    </ImageView>
+
+
+                    <TextView
+                        android:id="@+id/pCustomerStartingTime"
+                        android:text="10:30 PM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/liadornoirritregular">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/pCustomerStartingDate"
+                        android:text="21 october 2022"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/liadornoirritregular">
+
+                    </TextView>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_truck">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/pCustomerVehicleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/liadornoirritbold"
+                    android:text="ট্রাক"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/background"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+        </View>
+
+        <TextView
+            android:id="@+id/pCCommentsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 কমেন্ট"
+            android:fontFamily="@font/liadornoirritregular"
+            android:textColor="@color/primary">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/commentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_baseline_comment_24"
+                android:fontFamily="@font/latobold"
+                android:text="Comment"
+                android:visibility="gone">
+
+            </Button>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

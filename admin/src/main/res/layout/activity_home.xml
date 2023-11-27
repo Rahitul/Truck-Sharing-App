@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeActivity"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/sendOfferMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Offer Message">
+
+    </Button>
+
+    <Button
+        android:id="@+id/seeAllUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="See all users">
+
+    </Button>
+
+    <Button
+        android:id="@+id/seePostsOfDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="See all the posts of Drivers">
+
+    </Button>
+
+    <Button
+        android:id="@+id/seePostsOfCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="See all the posts of Customers">
+
+    </Button>
+
+</LinearLayout>

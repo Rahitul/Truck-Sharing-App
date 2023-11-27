@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customerCardView"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:padding="5dp"
+    app:contentPadding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userDp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/avatar">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/verifyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Verified">
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rahitul"
+                android:textSize="20dp"
+                android:textColor="@color/primary"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User ID:"
+                android:textSize="15dp"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/userId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="imuA86Or5HY4CRQRqf0aD8BSTOY2"
+                android:textSize="13dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textSize="15dp"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/userAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaiyara Sawdagar Bari, Road- 2313"
+                android:textSize="13dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone:"
+                android:textSize="15dp"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/userPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+8801305578370"
+                android:textSize="13dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NID:"
+                android:textSize="15dp"
+                android:textColor="@color/primary">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/userNationaNID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4542674775"
+                android:textSize="13dp">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/doVerify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verify this user">
+
+            </Button>
+
+            <Button
+                android:id="@+id/doDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete this user">
+
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

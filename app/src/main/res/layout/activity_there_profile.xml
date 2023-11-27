@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ThereProfileActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROFILE"
+            android:fontFamily="@font/neuropoliticalrg"
+            android:textSize="40sp"
+            android:textColor="@color/black">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/background">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImageViewId"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/avatar"
+            android:layout_gravity="left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Username"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/usernameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rahitul"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Address"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/addressTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rahitul"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="National Identity Card Number"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/nationalIdCardNoTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rahitul"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/logOutTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Log Out"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/quantum_googred"
+            android:layout_gravity="right">
+
+        </TextView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

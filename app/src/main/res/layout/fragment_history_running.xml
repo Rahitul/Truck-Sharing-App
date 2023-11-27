@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.HistoryRunningFragment">
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/liadornoirritbold"
+            android:text="রানিং ট্রিপ (কাস্টোমার)"
+            android:textColor="@color/primary"
+            android:textSize="17sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/runningHistoryCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBarRunningHistoryMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="363dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="344dp"
+        app:lottie_rawRes="@raw/please_wait"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabRunningHistoryAsDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/liadornoirritbold"
+        android:text="ড্রাইভার হিসাবে রানিং ট্রিপ দেখুন"
+        android:textAlignment="center" />
+</RelativeLayout>

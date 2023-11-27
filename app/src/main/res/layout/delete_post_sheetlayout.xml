@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
+
+    <LinearLayout
+        android:id="@+id/deleteBtn"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="পোস্টটি ডিলিট করুন"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/liadornoirritregular"
+            android:textColor="@color/primary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_edit_primary_color_24"/>
+
+        <EditText
+            android:id="@+id/addBidAmountET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="আপনার বিড এমাউন্ট দিন"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/liadornoirritregular"/>
+
+        <ImageView
+            android:id="@+id/layoutShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:layout_marginStart="50dp">
+
+        </ImageView>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
